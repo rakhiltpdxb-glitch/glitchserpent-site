@@ -72,6 +72,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      padding: 12px 0;
     }
 
     .brand {
@@ -212,8 +213,8 @@
     h1 {
       margin: 0;
       max-width: 780px;
-      font-size: clamp(3rem, 9vw, 6.7rem);
-      line-height: 0.94;
+      font-size: clamp(2.5rem, 8vw, 6.7rem);
+      line-height: 1.05;
       letter-spacing: 0;
     }
 
@@ -664,6 +665,7 @@
       .hero-inner,
       .about-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
       }
 
       .profile-panel {
@@ -684,20 +686,30 @@
     @media (max-width: 680px) {
       .nav {
         width: min(100% - 28px, var(--max-width));
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 0;
       }
 
       .nav-links {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .hero {
-        padding-top: 54px;
+        padding: 40px 0;
       }
 
       .hero-inner,
       .section-inner,
       .cta-inner {
         width: min(100% - 28px, var(--max-width));
+      }
+
+      .profile-panel {
+        width: min(100%, 300px);
+        margin: 16px auto 0;
       }
 
       .hero-actions {
@@ -708,6 +720,10 @@
       .button,
       .text-link {
         width: 100%;
+      }
+
+      .section {
+        padding: 50px 0;
       }
 
       .stats,
@@ -953,7 +969,7 @@
               <span class="project-tag">Data Parsing</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/rakhiltpdxb-glitch" target="_blank" rel="noopener noreferrer">View Code on GitHub</a>
+              <a href="https://github.com/rakhiltpdxb-glitch/glitchserpent-site/tree/main/reservoir-data-automation" target="_blank" rel="noopener noreferrer">View Code on GitHub</a>
             </div>
           </article>
 
@@ -967,7 +983,7 @@
               <span class="project-tag">Linux / RHCSA</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/rakhiltpdxb-glitch" target="_blank" rel="noopener noreferrer">View Playbook on GitHub</a>
+              <a href="https://github.com/rakhiltpdxb-glitch/glitchserpent-site/tree/main/ansible-web-provisioning" target="_blank" rel="noopener noreferrer">View Playbook on GitHub</a>
             </div>
           </article>
 
@@ -981,7 +997,7 @@
               <span class="project-tag">Cloud Architecture</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/rakhiltpdxb-glitch" target="_blank" rel="noopener noreferrer">View Architecture Diagram</a>
+              <a href="https://github.com/rakhiltpdxb-glitch/glitchserpent-site/tree/main/aws-resilient-architecture" target="_blank" rel="noopener noreferrer">View Architecture Diagram</a>
             </div>
           </article>
 
