@@ -1,3 +1,4 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -538,6 +539,75 @@
       color: var(--muted);
       font-size: 0.96rem;
     }
+    
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 34px;
+    }
+
+    .project-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 24px;
+      transition: transform 180ms ease, border-color 180ms ease;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(66, 232, 224, 0.45);
+    }
+
+    .project-card h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      letter-spacing: 0;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      flex-grow: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--cyan);
+      border: 1px solid rgba(66, 232, 224, 0.2);
+      font-weight: 700;
+    }
+
+    .project-links {
+      margin-top: 8px;
+    }
+
+    .project-links a {
+      font-size: 0.9rem;
+      color: var(--text);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 600;
+      transition: color 180ms ease;
+    }
+
+    .project-links a:hover {
+      color: var(--cyan);
+    }
 
     .cta {
       padding: 82px 0;
@@ -642,7 +712,8 @@
       }
 
       .stats,
-      .skills-grid {
+      .skills-grid,
+      .projects-grid {
         grid-template-columns: 1fr;
       }
 
@@ -672,6 +743,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
         <a href="#cv">CV</a>
       </div>
     </nav>
@@ -857,6 +929,63 @@
               <p>CI/CD thinking, version control workflows, environment consistency, monitoring, and release reliability.</p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="section-inner">
+        <div class="section-heading">
+          <h2 id="projects-title">Featured Projects</h2>
+          <p>
+            Practical applications of infrastructure automation, cloud deployment, and operational scripting.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <h3>Reservoir Data Automation</h3>
+            <p>
+              A Python utility built to automate the extraction and formatting of raw gauge data from slickline operations, replacing manual processing with a repeatable script.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Data Parsing</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/rakhiltpdxb-glitch" target="_blank" rel="noopener noreferrer">View Code on GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Automated Web Server Provisioning</h3>
+            <p>
+              An Ansible playbook configured to autonomously deploy, secure, and verify an RHCSA-compliant web server environment across multiple Linux nodes.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Ansible</span>
+              <span class="project-tag">Linux / RHCSA</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/rakhiltpdxb-glitch" target="_blank" rel="noopener noreferrer">View Playbook on GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Resilient Cloud Architecture</h3>
+            <p>
+              Deployment of a secure, highly available network topology in AWS featuring public/private subnets, load balancing, and IAM restrictions.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">AWS</span>
+              <span class="project-tag">Cloud Architecture</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/rakhiltpdxb-glitch" target="_blank" rel="noopener noreferrer">View Architecture Diagram</a>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
