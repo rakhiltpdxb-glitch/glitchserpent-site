@@ -1,9 +1,216 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glitch Serpent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS Variables for Dark Theme Colors */
+        :root {
+            --bg-color: #0b0f19;
+            --text-color: #e2e8f0;
+            --accent-primary: #00f2fe;
+            --accent-secondary: #4facfe;
+            --card-bg: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 4rem 2rem 2rem;
+            background: linear-gradient(to bottom, #000000, var(--bg-color));
+        }
+
+        header h1 {
+            font-size: 3rem;
+            background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-primary);
+            padding: 5px;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .about-me {
+            font-size: 1.1rem;
+            max-width: 600px;
+            color: #94a3b8;
+        }
+
+        /* Skills Grid Styling */
+        .skills-section {
+            margin-bottom: 4rem;
+        }
+
+        .skills-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #334155;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.1);
+            border-color: var(--accent-primary);
+        }
+
+        .skill-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-card h3 {
+            font-size: 1.2rem;
+        }
+
+        /* Call to Action Button Styling */
+        .cta-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--bg-color);
+            background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+            border-radius: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--accent-primary);
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #000000;
+            color: #64748b;
+            border-top: 1px solid #334155;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Glitch Serpent</h1>
+
+    <header>
+        <h1>Welcome to Glitch Serpent</h1>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <img src="https://via.placeholder.com/150/1e293b/00f2fe?text=Photo" alt="Rakhil Profile" class="profile-photo">
+            <p class="about-me">
+                I am a dedicated DevOps and Cloud professional specializing in building, deploying, and managing scalable infrastructure. I bridge the gap between development and operations to ensure seamless delivery and high availability.
+            </p>
+        </section>
+
+        <section class="skills-section">
+            <h2>Technical Stack</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fa-brands fa-linux"></i>
+                    <h3>RHCSA</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-server"></i>
+                    <h3>Ansible</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-python"></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-aws"></i>
+                    <h3>AWS</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-microsoft"></i>
+                    <h3>Azure</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <h3>DevOps</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <a href="cv-placeholder.pdf" target="_blank" class="btn">View CV</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by Rakhil tp</p>
+    </footer>
+
 </body>
 </html>
